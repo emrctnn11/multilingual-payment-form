@@ -7,6 +7,7 @@ import { CurrencyInputComponent } from '../../molecules/currency-input/currency-
 import { ActionButtonsComponent } from '../../molecules/action-buttons/action-buttons.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LabeledDateInputComponent } from '../../molecules/date-input/date-input.component';
+import { InfoTextComponent } from '../../atoms/text/info-text/info-text.component';
 
 @Component({
   selector: 'organism-payment-form',
@@ -20,6 +21,7 @@ import { LabeledDateInputComponent } from '../../molecules/date-input/date-input
     LabeledDateInputComponent,
     CurrencyInputComponent,
     ActionButtonsComponent,
+    InfoTextComponent, // Eğer bu bileşeni kullanacaksanız
   ],
   templateUrl: './payment-form.component.html',
 })

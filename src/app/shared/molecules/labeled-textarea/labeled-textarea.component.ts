@@ -1,11 +1,12 @@
 import { Component, input, Input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'molecule-labeled-textarea',
   standalone: true,
-  imports: [ReactiveFormsModule, FormLabelComponent],
+  imports: [ReactiveFormsModule, FormLabelComponent, TranslateModule],
   template: `
     <div class="space-y-1">
       @if(label(); as label) {
@@ -13,7 +14,7 @@ import { FormLabelComponent } from '../../atoms/label/form-label/form-label.comp
       }
       <textarea
         [formControl]="control()"
-        [placeholder]="placeholder()"
+        [placeholder]="placeholder() | translate"
         class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         rows="4"
       ></textarea>

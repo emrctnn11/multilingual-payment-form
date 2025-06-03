@@ -1,15 +1,17 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'molecule-labeled-date-input',
   standalone: true,
-  imports: [ReactiveFormsModule, FormLabelComponent],
+  imports: [ReactiveFormsModule, FormLabelComponent, TranslateModule],
   template: `
     <div class="space-y-1">
-      @if(label(); as label) {
-      <atom-form-label [text]="label" />}
+      @if(label(); as labelKey) {
+        <atom-form-label [text]="labelKey" />
+      }
       <input
         type="date"
         [formControl]="control()"

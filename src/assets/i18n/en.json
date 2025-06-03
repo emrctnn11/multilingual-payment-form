@@ -5,6 +5,9 @@
     "invoiceAmount": "Invoice Amount",
     "mainAmount": "Main Amount",
     "comment": "Comment",
-    "register": "Register"
+    "register": "Register",
+    "cancel": "Cancel",
+    "currentInvoiceBalance": "Current Invoice Balance",
+    "note": "In most cases, the creation date is not allowed to set backward or forward in time. Please check this out with the accounting laws of your country for exceptions from this rule."
   }
 }

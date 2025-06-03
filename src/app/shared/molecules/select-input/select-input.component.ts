@@ -2,11 +2,17 @@ import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'molecule-select-input',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormLabelComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormLabelComponent,
+    TranslateModule,
+  ],
   template: `
     <div class="space-y-1">
       @if(label(); as label) {
@@ -19,10 +25,10 @@ import { FormLabelComponent } from '../../atoms/label/form-label/form-label.comp
         (change)="selectionChange.emit(control().value)"
       >
         <option *ngIf="placeholder" value="" disabled selected hidden>
-          {{ placeholder() }}
+          {{ placeholder() | translate }}
         </option>
         <option *ngFor="let option of options()" [value]="option.value">
-          {{ option.label }}
+          {{ option.label | translate }}
         </option>
       </select>
     </div>

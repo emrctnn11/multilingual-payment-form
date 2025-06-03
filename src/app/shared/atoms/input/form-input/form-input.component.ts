@@ -8,7 +8,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     <input
       [type]="type"
       [placeholder]="placeholder"
-      class="border w-full p-2 rounded"
+      class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500"
       [value]="value"
       (input)="onChange($event)"
       (blur)="onTouched()"
@@ -18,9 +18,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: FormInputComponent
-    }
-  ]
+      useExisting: FormInputComponent,
+    },
+  ],
 })
 export class FormInputComponent implements ControlValueAccessor {
   @Input() type: string = 'text';

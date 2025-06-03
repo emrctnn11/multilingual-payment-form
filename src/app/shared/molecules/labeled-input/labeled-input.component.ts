@@ -3,11 +3,12 @@ import { Component, input, Input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';
 import { FormInputComponent } from '../../atoms/input/form-input/form-input.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'molecule-labeled-input',
   standalone: true,
-  imports: [FormLabelComponent, FormInputComponent, ReactiveFormsModule],
+  imports: [FormLabelComponent, FormInputComponent, ReactiveFormsModule, TranslateModule],
   template: `
     <div class="space-y-1">
       @if(label(); as label) {
@@ -16,7 +17,7 @@ import { FormInputComponent } from '../../atoms/input/form-input/form-input.comp
       }
       <atom-form-input
         [type]="type()"
-        [placeholder]="placeholder()"
+        [placeholder]="placeholder() | translate"
         [formControl]="control()!"
       ></atom-form-input>
     </div>

@@ -1,46 +1,52 @@
 <form
   [formGroup]="form"
   (ngSubmit)="onSubmit()"
-  class="space-y-4 max-w-2xl mx-auto p-6 bg-white rounded shadow"
+  class="max-w-5xl mx-auto p-6 bg-white rounded shadow"
 >
-  <!-- Account Number -->
-  <molecule-labeled-input
-    [label]="'payment.accountNumber'"
-    [placeholder]="'payment.accountNumber'"
-    [control]="accountNumberControl"
-  />
+  <div class="grid grid-cols-2 gap-x-6">
+    <div class="space-y-4 gap-2 flex flex-col">
+      <molecule-labeled-input
+        [label]="'payment.accountNumber'"
+        [placeholder]="'payment.accountNumber'"
+        [control]="accountNumberControl"
+      />
+      <molecule-labeled-date-input
+        [label]="'payment.paymentDate'"
+        [control]="paymentDateControl"
+      />
+      <molecule-currency-input
+        [label]="'payment.invoiceAmount'"
+        [currencySymbol]="'USD '"
+        [control]="invoiceAmountControl"
+      />
+      <molecule-currency-input
+        [label]="'payment.mainAmount'"
+        [currencySymbol]="'IQD'"
+        [control]="mainAmountControl"
+      />
+      <molecule-labeled-textarea
+        [label]="'payment.comment'"
+        [placeholder]="'payment.comment'"
+        [control]="commentControl"
+      />
+    </div>
 
-  <!-- Payment Date -->
-  <molecule-labeled-date-input
-    [label]="'payment.paymentDate'"
-    [control]="paymentDateControl"
-  />
+    <div class="space-y-6 pl-4 pt-1">
+      <atom-info-text
+        [label]="'payment.currentInvoiceBalance'"
+        [value]="'14.35 USD'"
+      />
+      <p class="text-sm text-gray-500 leading-snug">
+        {{ "payment.note" | translate }}
+      </p>
+    </div>
+  </div>
 
-  <!-- Invoice Amount -->
-  <molecule-currency-input
-    [label]="'payment.invoiceAmount'"
-    [currencySymbol]="'USD'"
-    [control]="invoiceAmountControl"
-  />
-
-  <!-- Main Amount -->
-  <molecule-currency-input
-    [label]="'payment.mainAmount'"
-    [currencySymbol]="'IQD'"
-    [control]="mainAmountControl"
-  />
-
-  <!-- Comment -->
-  <molecule-labeled-textarea
-    [label]="'payment.comment'"
-    [placeholder]="'payment.comment'"
-    [control]="commentControl"
-  />
-
-  <!-- Actions -->
-  <molecule-action-buttons
-    [submitText]="'payment.register' | translate"
-    [cancelText]="'payment.cancel' | translate"
-    (cancel)="onCancel()"
-  />
+  <div class="flex justify-end gap-4 mt-6">
+    <molecule-action-buttons
+      [submitText]="'payment.register'"
+      [cancelText]="'payment.cancel'"
+      (cancel)="onCancel()"
+    />
+  </div>
 </form>

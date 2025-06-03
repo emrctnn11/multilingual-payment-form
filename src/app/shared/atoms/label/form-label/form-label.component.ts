@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, input, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'atom-form-label',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule],
   template: `
     @if(text(); as text) {
 

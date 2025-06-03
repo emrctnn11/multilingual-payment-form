@@ -1,0 +1,46 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  class="space-y-4 max-w-2xl mx-auto p-6 bg-white rounded shadow"
+>
+  <!-- Account Number -->
+  <molecule-labeled-input
+    [label]="'payment.accountNumber'"
+    [placeholder]="'payment.accountNumber'"
+    [control]="accountNumberControl"
+  />
+
+  <!-- Payment Date -->
+  <molecule-labeled-date-input
+    [label]="'payment.paymentDate'"
+    [control]="paymentDateControl"
+  />
+
+  <!-- Invoice Amount -->
+  <molecule-currency-input
+    [label]="'payment.invoiceAmount'"
+    [currencySymbol]="'USD'"
+    [control]="invoiceAmountControl"
+  />
+
+  <!-- Main Amount -->
+  <molecule-currency-input
+    [label]="'payment.mainAmount'"
+    [currencySymbol]="'IQD'"
+    [control]="mainAmountControl"
+  />
+
+  <!-- Comment -->
+  <molecule-labeled-textarea
+    [label]="'payment.comment'"
+    [placeholder]="'payment.comment'"
+    [control]="commentControl"
+  />
+
+  <!-- Actions -->
+  <molecule-action-buttons
+    [submitText]="'payment.register' | translate"
+    [cancelText]="'payment.cancel' | translate"
+    (cancel)="onCancel()"
+  />
+</form>

@@ -1,0 +1,10 @@
+{
+  "payment": {
+    "accountNumber": "Account Number",
+    "paymentDate": "Payment Date",
+    "invoiceAmount": "Invoice Amount",
+    "mainAmount": "Main Amount",
+    "comment": "Comment",
+    "register": "Register"
+  }
+}

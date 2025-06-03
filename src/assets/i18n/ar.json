@@ -1,0 +1,10 @@
+{
+  "payment": {
+    "accountNumber": "رقم الحساب",
+    "paymentDate": "تاريخ الدفع",
+    "invoiceAmount": "مبلغ الفاتورة",
+    "mainAmount": "المبلغ الأساسي",
+    "comment": "ملاحظات",
+    "register": "تسجيل"
+  }
+}

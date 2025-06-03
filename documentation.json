@@ -1,0 +1,1843 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "User",
+            "id": "interface-User-d4821beac0e4a852e513391b7470981c4353fdd95a18628bb68136c8695b489ee15b926e2e5031bc26cf30e1508e0a362c3ee13a06734702b4d15af140e485d5",
+            "file": "src/stories/user.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {\n  name: string;\n}\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "ActionButtonsComponent",
+            "id": "component-ActionButtonsComponent-fb2913078e521fdd33ec0592da7de8ce51d907cdab847bd58278525bb9f433d45be43eb6e21c4e7bfce96114405e0c2bb7545e15239c64c34824da9072a4277b",
+            "file": "src/app/shared/molecules/action-buttons/action-buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "molecule-action-buttons",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"flex justify-between items-center gap-4 mt-4\">\n  <select\n    class=\"px-2 py-1 border border-gray-300 rounded text-sm\"\n    (change)=\"onLangChange($event)\"\n    [value]=\"currentLang\"\n  >\n    <option *ngFor=\"let lang of availableLangs\" [value]=\"lang\">\n      {{ lang.toUpperCase() }}\n    </option>\n  </select>\n\n  <div class=\"flex gap-2\">\n    <button\n      type=\"button\"\n      class=\"px-4 py-2 text-sm rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-50\"\n      (click)=\"cancel.emit()\"\n    >\n      {{ cancelText() | translate }}\n    </button>\n    <button\n      type=\"submit\"\n      class=\"px-4 py-2 text-sm rounded-md text-white bg-indigo-600 hover:bg-indigo-700\"\n      [disabled]=\"disableSubmit()\"\n    >\n      {{ submitText() | translate }}\n    </button>\n  </div>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disableSubmit",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 51,
+                    "required": false
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "cancel",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 52,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "availableLangs",
+                    "defaultValue": "['en', 'ar']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 55
+                },
+                {
+                    "name": "cancelText",
+                    "defaultValue": "input<string>('Cancel')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 49
+                },
+                {
+                    "name": "currentLang",
+                    "defaultValue": "this.translate.currentLang || 'en'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 56
+                },
+                {
+                    "name": "disableSubmit",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 51,
+                    "required": false
+                },
+                {
+                    "name": "submitText",
+                    "defaultValue": "input<string>('Submit')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 50
+                },
+                {
+                    "name": "translate",
+                    "defaultValue": "inject(TranslateService)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 48
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onLangChange",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 58,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  input,\n  Output,\n  Input,\n  inject,\n} from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { TranslateModule, TranslateService } from '@ngx-translate/core';\n\n@Component({\n  selector: 'molecule-action-buttons',\n  standalone: true,\n  imports: [CommonModule, TranslateModule],\n  template: `\n    <div class=\"flex justify-between items-center gap-4 mt-4\">\n      <select\n        class=\"px-2 py-1 border border-gray-300 rounded text-sm\"\n        (change)=\"onLangChange($event)\"\n        [value]=\"currentLang\"\n      >\n        <option *ngFor=\"let lang of availableLangs\" [value]=\"lang\">\n          {{ lang.toUpperCase() }}\n        </option>\n      </select>\n\n      <div class=\"flex gap-2\">\n        <button\n          type=\"button\"\n          class=\"px-4 py-2 text-sm rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-50\"\n          (click)=\"cancel.emit()\"\n        >\n          {{ cancelText() | translate }}\n        </button>\n        <button\n          type=\"submit\"\n          class=\"px-4 py-2 text-sm rounded-md text-white bg-indigo-600 hover:bg-indigo-700\"\n          [disabled]=\"disableSubmit()\"\n        >\n          {{ submitText() | translate }}\n        </button>\n      </div>\n    </div>\n  `,\n})\nexport class ActionButtonsComponent {\n  translate = inject(TranslateService);\n  cancelText = input<string>('Cancel');\n  submitText = input<string>('Submit');\n  disableSubmit = input<boolean>(false);\n  @Output() cancel = new EventEmitter<void>();\n\n  // 🔤 Language selection\n  availableLangs = ['en', 'ar'];\n  currentLang = this.translate.currentLang || 'en';\n\n  onLangChange(event: Event): void {\n    const lang = (event.target as HTMLSelectElement).value;\n    this.translate.use(lang);\n    this.currentLang = lang;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-be75ae7f9eb64cf18bde3f96573e31bb4484e5b1f86683f3f30e457f82aab053c16587fb4bd8db35400cba7dce52e5d847f4dde3da5bd1f0c8129999590b4224",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'multilingual-payment-form'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "RouterOutlet"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Inject } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { TranslateModule, TranslateService } from '@ngx-translate/core';\n\n@Component({\n  selector: 'app-root',\n  imports: [RouterOutlet, TranslateModule],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss',\n})\nexport class AppComponent {\n  title = 'multilingual-payment-form';\n  constructor(@Inject(TranslateService) private translate: TranslateService) {\n    this.translate.addLangs(['en', 'ar']);\n    this.translate.setDefaultLang('en');\n    this.translate.use('en');\n  }\n}\n",
+            "styleUrl": "./app.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "translate",
+                        "type": "TranslateService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "translate",
+                        "type": "TranslateService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<router-outlet />"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-d7bf0323e6da130e2609e2af0117b4a8d7cd874132206af50bf43dfc37044485fe50f2867ea76525730dd195b9b95a43802a12dadc6ad5cd7bf2faa07f19f0da",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": " <button  type=\"button\"\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  {{ label }}\n</button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nWhat background color to use",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 760,
+                            "end": 773,
+                            "kind": 327,
+                            "id": 0,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "tagName": {
+                                "pos": 761,
+                                "end": 769,
+                                "kind": 80,
+                                "id": 0,
+                                "flags": 16842752,
+                                "transformFlags": 0,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 37,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nIs this the principal call to action on the page?",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 21,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nHow large should the button be?",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 29,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nOptional click handler",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 41,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule],\n  template: ` <button\n  type=\"button\"\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  {{ label }}\n</button>`,\n  styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /** Is this the principal call to action on the page? */\n  @Input()\n  primary = false;\n\n  /** What background color to use */\n  @Input()\n  backgroundColor?: string;\n\n  /** How large should the button be? */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /** Optional click handler */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  display: inline-block;\n  cursor: pointer;\n  border: 0;\n  border-radius: 3em;\n  font-weight: 700;\n  line-height: 1;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n.storybook-button--primary {\n  background-color: #555ab9;\n  color: white;\n}\n.storybook-button--secondary {\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n  background-color: transparent;\n  color: #333;\n}\n.storybook-button--small {\n  padding: 10px 16px;\n  font-size: 12px;\n}\n.storybook-button--medium {\n  padding: 11px 20px;\n  font-size: 14px;\n}\n.storybook-button--large {\n  padding: 12px 24px;\n  font-size: 16px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 43
+                    }
+                }
+            }
+        },
+        {
+            "name": "CurrencyInputComponent",
+            "id": "component-CurrencyInputComponent-8fa59eb1edd6ae5e00936e375fdc32010e0cb890fb01047c87a8f7ac15948782f2c6e1ae1316fdb9798242bf8bcf96bad0e3c4c07406cf3761279c624b3241e2",
+            "file": "src/app/shared/molecules/currency-input/currency-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "molecule-currency-input",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"space-y-1\">\n  @if(label(); as labelKey) {\n    <atom-form-label [text]=\"labelKey\" />\n  }\n\n  <div class=\"relative rounded-md shadow-sm\">\n    <div class=\"pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3\">\n      <span class=\"text-gray-500 sm:text-sm\">\n        {{ currencySymbol() ? currencySymbol() : '$ ' }}\n      </span>\n    </div>\n\n    <input\n      type=\"number\"\n      inputmode=\"decimal\"\n      class=\"block w-full rounded-md border border-gray-300 pl-10 pr-12 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500\"\n      [placeholder]=\"placeHolder() | translate\"\n      [formControl]=\"control()\"\n    />\n  </div>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "control",
+                    "defaultValue": "input<FormControl>(new FormControl())",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 39
+                },
+                {
+                    "name": "currencySymbol",
+                    "defaultValue": "input<string>('$')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 38
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "input<string | undefined>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 36
+                },
+                {
+                    "name": "placeHolder",
+                    "defaultValue": "input<string>('0.00')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 37
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormLabelComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, input, signal } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ReactiveFormsModule, FormControl } from '@angular/forms';\nimport { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';\nimport { TranslateModule } from '@ngx-translate/core';\n\n@Component({\n  selector: 'molecule-currency-input',\n  standalone: true,\n  imports: [CommonModule, ReactiveFormsModule, FormLabelComponent, TranslateModule],\n  template: `\n    <div class=\"space-y-1\">\n      @if(label(); as labelKey) {\n        <atom-form-label [text]=\"labelKey\" />\n      }\n\n      <div class=\"relative rounded-md shadow-sm\">\n        <div class=\"pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3\">\n          <span class=\"text-gray-500 sm:text-sm\">\n            {{ currencySymbol() ? currencySymbol() : '$ ' }}\n          </span>\n        </div>\n\n        <input\n          type=\"number\"\n          inputmode=\"decimal\"\n          class=\"block w-full rounded-md border border-gray-300 pl-10 pr-12 py-2 text-sm focus:border-indigo-500 focus:ring-indigo-500\"\n          [placeholder]=\"placeHolder() | translate\"\n          [formControl]=\"control()\"\n        />\n      </div>\n    </div>\n  `,\n})\nexport class CurrencyInputComponent {\n  label = input<string | undefined>();\n  placeHolder = input<string>('0.00');\n  currencySymbol = input<string>('$');\n  control = input<FormControl>(new FormControl());\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "FormInputComponent",
+            "id": "component-FormInputComponent-2fe3ca10f086da8cca5aded334edf1cb6adeccf6869f05e361d2be0745e06489e8b3730fd871812bfa7d59d6bb71c7ed38f081df01e1e845bc611227346968c9",
+            "file": "src/app/shared/atoms/input/form-input/form-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, multi: true, useExisting: FormInputComponent,\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "atom-form-input",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<input\n  [type]=\"type\"\n  [placeholder]=\"placeholder\"\n  class=\"w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500\"\n  [value]=\"value\"\n  (input)=\"onChange($event)\"\n  (blur)=\"onTouched()\"\n/>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 31
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 36,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';\n\n@Component({\n  selector: 'atom-form-input',\n  standalone: true,\n  template: `\n    <input\n      [type]=\"type\"\n      [placeholder]=\"placeholder\"\n      class=\"w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500\"\n      [value]=\"value\"\n      (input)=\"onChange($event)\"\n      (blur)=\"onTouched()\"\n    />\n  `,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      multi: true,\n      useExisting: FormInputComponent,\n    },\n  ],\n})\nexport class FormInputComponent implements ControlValueAccessor {\n  @Input() type: string = 'text';\n  @Input() placeholder: string = '';\n\n  value = '';\n  onChange = (value: any) => {};\n  onTouched = () => {};\n\n  writeValue(value: any): void {\n    this.value = value;\n  }\n  registerOnChange(fn: any): void {\n    this.onChange = fn;\n  }\n  registerOnTouched(fn: any): void {\n    this.onTouched = fn;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ]
+        },
+        {
+            "name": "FormLabelComponent",
+            "id": "component-FormLabelComponent-c1f723f58a80839cac26c8683a8ff6272a9c7e7faa6a30a61c58f628324c31081ceff889d2298d063539c536b67ff2639792b808d99eb9d480f8ff772901ff8b",
+            "file": "src/app/shared/atoms/label/form-label/form-label.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "atom-form-label",
+            "styleUrls": [],
+            "styles": [],
+            "template": "@if(text(); as text) {\n\n<label class=\"block text-sm font-medium text-gray-700\">\n  {{ text | translate }}\n</label>\n}\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "text",
+                    "defaultValue": "input<string | undefined>('')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, input, Input } from '@angular/core';\nimport { TranslateModule } from '@ngx-translate/core';\n\n@Component({\n  selector: 'atom-form-label',\n  standalone: true,\n  imports: [TranslateModule, CommonModule],\n  template: `\n    @if(text(); as text) {\n\n    <label class=\"block text-sm font-medium text-gray-700\">\n      {{ text | translate }}\n    </label>\n    }\n  `,\n})\nexport class FormLabelComponent {\n  text = input<string | undefined>('');\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-48b9abe37706bc42f20cfa97ed9f943678344ea7d254c0c82183c657750c2191b43486fe730c778627b2ea6aa0e2f33a7abcf3ce08b68ad18b062ad99ea97acb",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>  <div class=\"storybook-header\">\n    <div>\n      <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n            fill=\"#FFF\"\n          />\n          <path\n            d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n            fill=\"#555AB9\"\n          />\n          <path d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\" fill=\"#91BAF8\" />\n        </g>\n      </svg>\n      <h1>Acme</h1>\n    </div>\n    <div>\n      <div *ngIf=\"user\">\n        <span class=\"welcome\">\n          Welcome, <b>{{ user.name }}</b\n          >!\n        </span>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n      </div>\n      <div *ngIf=\"!user\">\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          class=\"margin-left\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          [primary]=\"true\"\n          class=\"margin-left\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </div>\n</header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 66,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 75,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 69,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 72,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { ButtonComponent } from './button.component';\nimport type { User } from './user';\n\n@Component({\n  selector: 'storybook-header',\n  standalone: true,\n  imports: [CommonModule, ButtonComponent],\n  template: `<header>\n  <div class=\"storybook-header\">\n    <div>\n      <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n            fill=\"#FFF\"\n          />\n          <path\n            d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n            fill=\"#555AB9\"\n          />\n          <path d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\" fill=\"#91BAF8\" />\n        </g>\n      </svg>\n      <h1>Acme</h1>\n    </div>\n    <div>\n      <div *ngIf=\"user\">\n        <span class=\"welcome\">\n          Welcome, <b>{{ user.name }}</b\n          >!\n        </span>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n      </div>\n      <div *ngIf=\"!user\">\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          class=\"margin-left\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          [primary]=\"true\"\n          class=\"margin-left\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </div>\n</header>`,\n  styleUrls: ['./header.css'],\n})\nexport class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  display: inline-block;\n  vertical-align: top;\n  margin: 6px 0 6px 10px;\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  margin-right: 10px;\n  color: #333;\n  font-size: 14px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "InfoTextComponent",
+            "id": "component-InfoTextComponent-26f3f67deecf2426061e57ad1cc6d2686952ba7735fbe6006262094abaeffe401e7b53f1f07f988ddec1eb46e5e4f6a8ea2f478d0c8773b7113ad6646d2e7abf",
+            "file": "src/app/shared/atoms/text/info-text/info-text.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "atom-info-text",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div\n  class=\"flex items-center justify-between text-sm font-medium text-gray-700\"\n>\n  <span>{{ label | translate }}</span>\n  <span class=\"text-gray-400 text-sm font-semibold\">{{\n    value | translate\n  }}</span>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { TranslateModule } from '@ngx-translate/core';\n\n@Component({\n  selector: 'atom-info-text',\n  standalone: true,\n  imports: [CommonModule, TranslateModule],\n  template: `\n    <div\n      class=\"flex items-center justify-between text-sm font-medium text-gray-700\"\n    >\n      <span>{{ label | translate }}</span>\n      <span class=\"text-gray-400 text-sm font-semibold\">{{\n        value | translate\n      }}</span>\n    </div>\n  `,\n})\nexport class InfoTextComponent {\n  @Input() label = '';\n  @Input() value = '';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "LabeledDateInputComponent",
+            "id": "component-LabeledDateInputComponent-0a4c6f43cf42810cb7b91b81d9d5baa7f0d51292b832425029faee06e7ea539469ba8df4c6b8dcc368970d9cc5c373205a761930879735946c9f9ec53f61966b",
+            "file": "src/app/shared/molecules/date-input/date-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "molecule-labeled-date-input",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"space-y-1\">\n  @if(label(); as labelKey) {\n    <atom-form-label [text]=\"labelKey\" />\n  }\n  <input\n    type=\"date\"\n    [formControl]=\"control()\"\n    class=\"block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm\"\n  />\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "control",
+                    "defaultValue": "input<FormControl>(new FormControl())",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "input<string | undefined>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormLabelComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, input } from '@angular/core';\nimport { FormControl, ReactiveFormsModule } from '@angular/forms';\nimport { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';\nimport { TranslateModule } from '@ngx-translate/core';\n\n@Component({\n  selector: 'molecule-labeled-date-input',\n  standalone: true,\n  imports: [ReactiveFormsModule, FormLabelComponent, TranslateModule],\n  template: `\n    <div class=\"space-y-1\">\n      @if(label(); as labelKey) {\n        <atom-form-label [text]=\"labelKey\" />\n      }\n      <input\n        type=\"date\"\n        [formControl]=\"control()\"\n        class=\"block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm\"\n      />\n    </div>\n  `,\n})\nexport class LabeledDateInputComponent {\n  label = input<string | undefined>();\n  control = input<FormControl>(new FormControl());\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "LabeledInputComponent",
+            "id": "component-LabeledInputComponent-bb621d7a68ec05c6d1e2e6a608121e5de5224781920e483b7e32f5bb74553efd4f1a87db6f7941d038d852e5a1903096be301175a8f8991e6d2ffef387700784",
+            "file": "src/app/shared/molecules/labeled-input/labeled-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "molecule-labeled-input",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"space-y-1\">\n  @if(label(); as label) {\n\n  <atom-form-label [text]=\"label\"></atom-form-label>\n  }\n  <atom-form-input\n    [type]=\"type()\"\n    [placeholder]=\"placeholder() | translate\"\n    [formControl]=\"control()!\"\n  ></atom-form-input>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "control",
+                    "defaultValue": "input<FormControl | null>(null)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "input<string | undefined>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "input<string>('')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "input<string>('text')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 28
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "FormLabelComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "FormInputComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, input, Input } from '@angular/core';\nimport { FormControl, ReactiveFormsModule } from '@angular/forms';\nimport { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';\nimport { FormInputComponent } from '../../atoms/input/form-input/form-input.component';\nimport { TranslateModule } from '@ngx-translate/core';\n\n@Component({\n  selector: 'molecule-labeled-input',\n  standalone: true,\n  imports: [FormLabelComponent, FormInputComponent, ReactiveFormsModule, TranslateModule],\n  template: `\n    <div class=\"space-y-1\">\n      @if(label(); as label) {\n\n      <atom-form-label [text]=\"label\"></atom-form-label>\n      }\n      <atom-form-input\n        [type]=\"type()\"\n        [placeholder]=\"placeholder() | translate\"\n        [formControl]=\"control()!\"\n      ></atom-form-input>\n    </div>\n  `,\n})\nexport class LabeledInputComponent {\n  label = input<string | undefined>();\n  type = input<string>('text');\n  placeholder = input<string>('');\n  control = input<FormControl | null>(null);\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "LabeledTextareaComponent",
+            "id": "component-LabeledTextareaComponent-b6325433563b177aaf02523091d31abb4b821b7b1205ade9354ec35b7de3f2dd37c3b70d8f68145257e97e5c033e69bb51078d4f666d2956675bf31c63b92ee8",
+            "file": "src/app/shared/molecules/labeled-textarea/labeled-textarea.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "molecule-labeled-textarea",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"space-y-1\">\n  @if(label(); as label) {\n  <atom-form-label [text]=\"label\" />\n  }\n  <textarea\n    [formControl]=\"control()\"\n    [placeholder]=\"placeholder() | translate\"\n    class=\"block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm\"\n    rows=\"4\"\n  ></textarea>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "control",
+                    "defaultValue": "input<FormControl>(new FormControl())",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "input<string | undefined>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "input<string>('Enter text here...')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormLabelComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, input, Input } from '@angular/core';\nimport { FormControl, ReactiveFormsModule } from '@angular/forms';\nimport { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';\nimport { TranslateModule } from '@ngx-translate/core';\n\n@Component({\n  selector: 'molecule-labeled-textarea',\n  standalone: true,\n  imports: [ReactiveFormsModule, FormLabelComponent, TranslateModule],\n  template: `\n    <div class=\"space-y-1\">\n      @if(label(); as label) {\n      <atom-form-label [text]=\"label\" />\n      }\n      <textarea\n        [formControl]=\"control()\"\n        [placeholder]=\"placeholder() | translate\"\n        class=\"block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm\"\n        rows=\"4\"\n      ></textarea>\n    </div>\n  `,\n})\nexport class LabeledTextareaComponent {\n  label = input<string | undefined>();\n  placeholder = input<string>('Enter text here...');\n  control = input<FormControl>(new FormControl());\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-21dd6eb370b4983b5c21c84d40e6f54d266a9d9af9889e6e76b35c43058bd53b3e451bad089d5adf4bea46647ba10265a2fa8cb15630398e75636307d4817fc6",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>  <storybook-header\n    [user]=\"user\"\n    (onLogout)=\"doLogout()\"\n    (onLogin)=\"doLogin()\"\n    (onCreateAccount)=\"doCreateAccount()\"\n  ></storybook-header>\n  <section class=\"storybook-page\">\n    <h2>Pages in Storybook</h2>\n    <p>\n      We recommend building UIs with a\n      <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n        <strong>component-driven</strong>\n      </a>\n      process starting with atomic components and ending with pages.\n    </p>\n    <p>\n      Render pages with mock data. This makes it easy to build and review page states without\n      needing to navigate to them in your app. Here are some handy patterns for managing page data\n      in Storybook:\n    </p>\n    <ul>\n      <li>\n        Use a higher-level connected component. Storybook helps you compose such data from the\n        \"args\" of child component stories\n      </li>\n      <li>\n        Assemble data in the page component from your services. You can mock these services out\n        using Storybook.\n      </li>\n    </ul>\n    <p>\n      Get a guided tutorial on component-driven development at\n      <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n        Storybook tutorials\n      </a>\n      . Read more in the\n      <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n      .\n    </p>\n    <div class=\"tip-wrapper\">\n      <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n      <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n            id=\"a\"\n            fill=\"#999\"\n          />\n        </g>\n      </svg>\n      Viewports addon in the toolbar\n    </div>\n  </section>\n</article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 69
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 79,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 75,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 71,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "HeaderComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { HeaderComponent } from './header.component';\nimport type { User } from './user';\n\n@Component({\n  selector: 'storybook-page',\n  standalone: true,\n  imports: [CommonModule, HeaderComponent],\n  template: `<article>\n  <storybook-header\n    [user]=\"user\"\n    (onLogout)=\"doLogout()\"\n    (onLogin)=\"doLogin()\"\n    (onCreateAccount)=\"doCreateAccount()\"\n  ></storybook-header>\n  <section class=\"storybook-page\">\n    <h2>Pages in Storybook</h2>\n    <p>\n      We recommend building UIs with a\n      <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n        <strong>component-driven</strong>\n      </a>\n      process starting with atomic components and ending with pages.\n    </p>\n    <p>\n      Render pages with mock data. This makes it easy to build and review page states without\n      needing to navigate to them in your app. Here are some handy patterns for managing page data\n      in Storybook:\n    </p>\n    <ul>\n      <li>\n        Use a higher-level connected component. Storybook helps you compose such data from the\n        \"args\" of child component stories\n      </li>\n      <li>\n        Assemble data in the page component from your services. You can mock these services out\n        using Storybook.\n      </li>\n    </ul>\n    <p>\n      Get a guided tutorial on component-driven development at\n      <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n        Storybook tutorials\n      </a>\n      . Read more in the\n      <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n      .\n    </p>\n    <div class=\"tip-wrapper\">\n      <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n      <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n            id=\"a\"\n            fill=\"#999\"\n          />\n        </g>\n      </svg>\n      Viewports addon in the toolbar\n    </div>\n  </section>\n</article>`,\n  styleUrls: ['./page.css'],\n})\nexport class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-page {\n  margin: 0 auto;\n  padding: 48px 20px;\n  max-width: 600px;\n  color: #333;\n  font-size: 14px;\n  line-height: 24px;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n.storybook-page h2 {\n  display: inline-block;\n  vertical-align: top;\n  margin: 0 0 4px;\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  color: inherit;\n}\n\n.storybook-page ul {\n  margin: 1em 0;\n  padding-left: 30px;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 10px;\n  border-radius: 1em;\n  background: #e7fdd8;\n  padding: 4px 12px;\n  color: #357a14;\n  font-weight: 700;\n  font-size: 11px;\n  line-height: 12px;\n}\n\n.storybook-page .tip-wrapper {\n  margin-top: 40px;\n  margin-bottom: 40px;\n  font-size: 13px;\n  line-height: 20px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: 3px;\n  margin-right: 4px;\n  width: 12px;\n  height: 12px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "PaymentFormComponent",
+            "id": "component-PaymentFormComponent-af1b8cc26b75bfd7c2f36d4de8cca7a88c1fe54ab48c0ecd4864d740d52b0eec8d1205a4621c1ce4692a114b7cacd9ef2dc704943373e2ee94d4614ee5f27e32",
+            "file": "src/app/shared/organisms/payment-form/payment-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "organism-payment-form",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./payment-form.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "fb",
+                    "defaultValue": "inject(FormBuilder)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 29,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "form",
+                    "defaultValue": "this.fb.group({\n    accountNumber: this.fb.control<string>('', Validators.required),\n    paymentDate: this.fb.control<string>('', Validators.required),\n    invoiceAmount: this.fb.control<number | null>(null, Validators.required),\n    mainAmount: this.fb.control<number | null>(null, Validators.required),\n    comment: this.fb.control<string>(''),\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 32
+                },
+                {
+                    "name": "translate",
+                    "defaultValue": "inject(TranslateService)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onCancel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 67,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 61,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                },
+                {
+                    "name": "LabeledInputComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "LabeledTextareaComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "LabeledDateInputComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "CurrencyInputComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ActionButtonsComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "InfoTextComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';\nimport { LabeledInputComponent } from '../../molecules/labeled-input/labeled-input.component';\nimport { LabeledTextareaComponent } from '../../molecules/labeled-textarea/labeled-textarea.component';\nimport { CurrencyInputComponent } from '../../molecules/currency-input/currency-input.component';\nimport { ActionButtonsComponent } from '../../molecules/action-buttons/action-buttons.component';\nimport { TranslateModule, TranslateService } from '@ngx-translate/core';\nimport { LabeledDateInputComponent } from '../../molecules/date-input/date-input.component';\nimport { InfoTextComponent } from '../../atoms/text/info-text/info-text.component';\n\n@Component({\n  selector: 'organism-payment-form',\n  standalone: true,\n  imports: [\n    CommonModule,\n    ReactiveFormsModule,\n    TranslateModule,\n    LabeledInputComponent,\n    LabeledTextareaComponent,\n    LabeledDateInputComponent,\n    CurrencyInputComponent,\n    ActionButtonsComponent,\n    InfoTextComponent, // Eğer bu bileşeni kullanacaksanız\n  ],\n  templateUrl: './payment-form.component.html',\n})\nexport class PaymentFormComponent {\n  private fb = inject(FormBuilder);\n  private translate = inject(TranslateService);\n\n  form: FormGroup = this.fb.group({\n    accountNumber: this.fb.control<string>('', Validators.required),\n    paymentDate: this.fb.control<string>('', Validators.required),\n    invoiceAmount: this.fb.control<number | null>(null, Validators.required),\n    mainAmount: this.fb.control<number | null>(null, Validators.required),\n    comment: this.fb.control<string>(''),\n  });\n\n  // 🔽 Getter'lar (FormControl olarak dönüyorlar)\n  get accountNumberControl(): FormControl {\n    return this.form.get('accountNumber') as FormControl;\n  }\n\n  get paymentDateControl(): FormControl {\n    return this.form.get('paymentDate') as FormControl;\n  }\n\n  get invoiceAmountControl(): FormControl {\n    return this.form.get('invoiceAmount') as FormControl;\n  }\n\n  get mainAmountControl(): FormControl {\n    return this.form.get('mainAmount') as FormControl;\n  }\n\n  get commentControl(): FormControl {\n    return this.form.get('comment') as FormControl;\n  }\n\n  onSubmit(): void {\n    if (this.form.valid) {\n      console.log('Form submitted', this.form.value);\n    }\n  }\n\n  onCancel(): void {\n    console.log('Cancelled');\n    this.form.reset();\n  }\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "accountNumberControl": {
+                    "name": "accountNumberControl",
+                    "getSignature": {
+                        "name": "accountNumberControl",
+                        "type": "",
+                        "returnType": "FormControl",
+                        "line": 41
+                    }
+                },
+                "paymentDateControl": {
+                    "name": "paymentDateControl",
+                    "getSignature": {
+                        "name": "paymentDateControl",
+                        "type": "",
+                        "returnType": "FormControl",
+                        "line": 45
+                    }
+                },
+                "invoiceAmountControl": {
+                    "name": "invoiceAmountControl",
+                    "getSignature": {
+                        "name": "invoiceAmountControl",
+                        "type": "",
+                        "returnType": "FormControl",
+                        "line": 49
+                    }
+                },
+                "mainAmountControl": {
+                    "name": "mainAmountControl",
+                    "getSignature": {
+                        "name": "mainAmountControl",
+                        "type": "",
+                        "returnType": "FormControl",
+                        "line": 53
+                    }
+                },
+                "commentControl": {
+                    "name": "commentControl",
+                    "getSignature": {
+                        "name": "commentControl",
+                        "type": "",
+                        "returnType": "FormControl",
+                        "line": 57
+                    }
+                }
+            },
+            "templateData": "<form\n  [formGroup]=\"form\"\n  (ngSubmit)=\"onSubmit()\"\n  class=\"max-w-5xl mx-auto p-6 bg-white rounded shadow\"\n>\n  <div class=\"grid grid-cols-2 gap-x-6\">\n    <div class=\"space-y-4 gap-2 flex flex-col\">\n      <molecule-labeled-input\n        [label]=\"'payment.accountNumber'\"\n        [placeholder]=\"'payment.accountNumber'\"\n        [control]=\"accountNumberControl\"\n      />\n      <molecule-labeled-date-input\n        [label]=\"'payment.paymentDate'\"\n        [control]=\"paymentDateControl\"\n      />\n      <molecule-currency-input\n        [label]=\"'payment.invoiceAmount'\"\n        [currencySymbol]=\"'USD '\"\n        [control]=\"invoiceAmountControl\"\n      />\n      <molecule-currency-input\n        [label]=\"'payment.mainAmount'\"\n        [currencySymbol]=\"'IQD'\"\n        [control]=\"mainAmountControl\"\n      />\n      <molecule-labeled-textarea\n        [label]=\"'payment.comment'\"\n        [placeholder]=\"'payment.comment'\"\n        [control]=\"commentControl\"\n      />\n    </div>\n\n    <div class=\"space-y-6 pl-4 pt-1\">\n      <atom-info-text\n        [label]=\"'payment.currentInvoiceBalance'\"\n        [value]=\"'14.35 USD'\"\n      />\n      <p class=\"text-sm text-gray-500 leading-snug\">\n        {{ \"payment.note\" | translate }}\n      </p>\n    </div>\n  </div>\n\n  <div class=\"flex justify-end gap-4 mt-6\">\n    <molecule-action-buttons\n      [submitText]=\"'payment.register'\"\n      [cancelText]=\"'payment.cancel'\"\n      (cancel)=\"onCancel()\"\n    />\n  </div>\n</form>\n"
+        },
+        {
+            "name": "PaymentFormPageComponent",
+            "id": "component-PaymentFormPageComponent-17012898f195c41552c6eb86f5026ecc7686038cfcceb07ffc38f23ea8348ff60423a61c8498beac05e28419c4728a44cabb824571f2af89e495802c344486d5",
+            "file": "src/app/pages/payment-form-page/payment-form-page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "page-payment-form",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<organism-payment-form />",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "PaymentFormComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { PaymentFormComponent } from '../../shared/organisms/payment-form/payment-form.component';\n\n@Component({\n  selector: 'page-payment-form',\n  standalone: true,\n  imports: [CommonModule, PaymentFormComponent],\n  template: `<organism-payment-form />`,\n})\nexport class PaymentFormPageComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "SelectInputComponent",
+            "id": "component-SelectInputComponent-fa023a7a9c8942f75ae6b55bd559140803d361edce58d4af9b3cca8241c7ad45e480a75af3de149f706a929cb9cc24ea0d0fa6fde6ea7ac617d4031214006838",
+            "file": "src/app/shared/molecules/select-input/select-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "molecule-select-input",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"space-y-1\">\n  @if(label(); as label) {\n  <atom-form-label [text]=\"label\" />\n  }\n\n  <select\n    class=\"mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm\"\n    [formControl]=\"control()\"\n    (change)=\"selectionChange.emit(control().value)\"\n  >\n    <option *ngIf=\"placeholder\" value=\"\" disabled selected hidden>\n      {{ placeholder() | translate }}\n    </option>\n    <option *ngFor=\"let option of options()\" [value]=\"option.value\">\n      {{ option.label | translate }}\n    </option>\n  </select>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "selectionChange",
+                    "defaultValue": "new EventEmitter<any>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 43,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "control",
+                    "defaultValue": "input<FormControl>(new FormControl())",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 41
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "input<string | undefined>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 38
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "input<{ label: string; value: any }[]>([])",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 40
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "input<string>('Select an option')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 39
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormLabelComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "TranslateModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, input, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { FormControl, ReactiveFormsModule } from '@angular/forms';\nimport { FormLabelComponent } from '../../atoms/label/form-label/form-label.component';\nimport { TranslateModule } from '@ngx-translate/core';\n\n@Component({\n  selector: 'molecule-select-input',\n  standalone: true,\n  imports: [\n    CommonModule,\n    ReactiveFormsModule,\n    FormLabelComponent,\n    TranslateModule,\n  ],\n  template: `\n    <div class=\"space-y-1\">\n      @if(label(); as label) {\n      <atom-form-label [text]=\"label\" />\n      }\n\n      <select\n        class=\"mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm\"\n        [formControl]=\"control()\"\n        (change)=\"selectionChange.emit(control().value)\"\n      >\n        <option *ngIf=\"placeholder\" value=\"\" disabled selected hidden>\n          {{ placeholder() | translate }}\n        </option>\n        <option *ngFor=\"let option of options()\" [value]=\"option.value\">\n          {{ option.label | translate }}\n        </option>\n      </select>\n    </div>\n  `,\n})\nexport class SelectInputComponent {\n  label = input<string | undefined>();\n  placeholder = input<string>('Select an option');\n  options = input<{ label: string; value: any }[]>([]);\n  control = input<FormControl>(new FormControl());\n\n  @Output() selectionChange = new EventEmitter<any>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\n  providers: [\n    provideClientHydration(),\n    provideHttpClient(withInterceptors([])),\n    provideRouter(appRoutes),\n    importProvidersFrom(\n      TranslateModule.forRoot({\n        defaultLanguage: 'en',\n        loader: {\n          provide: TranslateLoader,\n          useFactory: HttpLoaderFactory,\n          deps: [HttpClient]\n        }\n      })\n    )\n  ]\n}"
+            }
+        ],
+        "functions": [
+            {
+                "name": "HttpLoaderFactory",
+                "file": "src/app/app.config.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\n  providers: [\n    provideClientHydration(),\n    provideHttpClient(withInterceptors([])),\n    provideRouter(appRoutes),\n    importProvidersFrom(\n      TranslateModule.forRoot({\n        defaultLanguage: 'en',\n        loader: {\n          provide: TranslateLoader,\n          useFactory: HttpLoaderFactory,\n          deps: [HttpClient]\n        }\n      })\n    )\n  ]\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "src/app/app.config.ts": [
+                {
+                    "name": "HttpLoaderFactory",
+                    "file": "src/app/app.config.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "http",
+                            "type": "HttpClient",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "http",
+                            "type": "HttpClient",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 4,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "HttpLoaderFactory",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/pages/payment-form-page/payment-form-page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PaymentFormPageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/atoms/input/form-input/form-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/atoms/label/form-label/form-label.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormLabelComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/atoms/text/info-text/info-text.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InfoTextComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/molecules/action-buttons/action-buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ActionButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/molecules/currency-input/currency-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CurrencyInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/molecules/date-input/date-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LabeledDateInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/molecules/labeled-input/labeled-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LabeledInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/molecules/labeled-textarea/labeled-textarea.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LabeledTextareaComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/molecules/select-input/select-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SelectInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/organisms/payment-form/payment-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PaymentFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/user.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            }
+        ]
+    }
+}
